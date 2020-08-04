@@ -1,5 +1,17 @@
+<<<<<<< Updated upstream
 <h1>Top page</h1>
 <%= link_to"投稿ページ",'/posts/new'%>
+=======
+<h1>FirstAPP</h1>
+<%= form_with url:  "/posts", method: :post,id: "form" do |form| %>
+  <%= form.text_field :content  , id: "content"%>
+  <%= form.submit '投稿する' , id: "submit" %>
+<% end %>
+
+<div id="list">
+</div>
+
+>>>>>>> Stashed changes
 <% @posts.each do |post|%>
   <div>
     <%= post.memo %>
